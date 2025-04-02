@@ -47,6 +47,12 @@
                 - Embedded Tomcat server (default)
                 - Spring MVC (spring-web and spring-webmvc)
                 - Jackson (for JSON serialization/deserialization)
+             Sub-dependencies are:
+                - tomcat
+                - web
+                - webmvc
+                - jackson
+                - logging
         -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
