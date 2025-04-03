@@ -11,7 +11,15 @@ public class StoreApplication {
 
         // Created a new class using open-close principle
         // Here without changing existing code of OrderService, we added more functionality
-        var orderService = new OrderService(new PaypalPaymentService());
+        var orderService = new OrderService();
+
+        /**
+         * Setter injection
+         * <p>
+         * this is little dangerous, reason is we might have null pointer exception
+         * when setter is missed, so usually done for only optional dependencies
+         */
+        orderService.setPaymentService(new PaypalPaymentService());
         orderService.placeOrder();
     }
 

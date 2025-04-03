@@ -4,9 +4,11 @@ public class OrderService {
     private PaymentService paymentService;
 
     // Constructor injection
-    public OrderService(PaymentService paymentService) {
-        this.paymentService = paymentService;
-    }
+    /**
+     * public OrderService(PaymentService paymentService) {
+     *  this.paymentService = paymentService;
+     *  }
+     */
 
     public void placeOrder() {
         // var paymentService = new StripePaymentService();
@@ -15,4 +17,8 @@ public class OrderService {
         paymentService.processPayment(10);
     }
 
+    // Setter
+    public void setPaymentService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
 }
