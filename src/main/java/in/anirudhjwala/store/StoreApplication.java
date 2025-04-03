@@ -8,7 +8,10 @@ public class StoreApplication {
 
     public static void main(String[] args) {
         // SpringApplication.run(StoreApplication.class, args);
-        var orderService = new OrderService(new StripePaymentService());
+
+        // Created a new class using open-close principle
+        // Here without changing existing code of OrderService, we added more functionality
+        var orderService = new OrderService(new PaypalPaymentService());
         orderService.placeOrder();
     }
 
