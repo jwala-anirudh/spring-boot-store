@@ -1,4 +1,4 @@
-package in.anirudhjwala.store;
+package in.anirudhjwala.store.orders;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

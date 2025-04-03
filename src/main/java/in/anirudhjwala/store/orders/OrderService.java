@@ -1,4 +1,4 @@
-package in.anirudhjwala.store;
+package in.anirudhjwala.store.orders;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
