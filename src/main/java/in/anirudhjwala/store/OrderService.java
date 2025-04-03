@@ -1,5 +1,10 @@
 package in.anirudhjwala.store;
 
+/**
+ * Spring Core
+ * ==============
+ * Spring can create objects and inject them into our classes.
+ */
 public class OrderService {
     private PaymentService paymentService;
 
