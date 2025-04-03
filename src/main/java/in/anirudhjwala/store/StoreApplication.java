@@ -1,5 +1,6 @@
 package in.anirudhjwala.store;
 
+import in.anirudhjwala.store.notifications.NotificationManager;
 import in.anirudhjwala.store.orders.OrderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,10 @@ public class StoreApplication {
         // Spring IOC (Inversion of control)
         var orderService = context.getBean(OrderService.class);
         orderService.placeOrder();
+
+        // Notification service
+        var notificationManager = context.getBean(NotificationManager.class);
+        notificationManager.sendNotification("This is a test");
     }
 
 }
